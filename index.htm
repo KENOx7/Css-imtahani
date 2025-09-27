@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
     <header>
@@ -92,7 +93,7 @@
         <section class="section1">
             <div class="section1txt">
                 <h1>Top Places to visit</h1>
-                <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.</p>
+                <p id="boz">Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.</p>
             </div>
             <div class="cards1">
                 <div class="card1">
@@ -138,6 +139,87 @@
             </div>
             <button id="dis">Discover More</button>
         </section>
+        <div class="slider swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slidercard">
+                        <h5 class="active">Upcoming Event</h5>
+                        <h2>Maldeve - Asia</h2>
+                        <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.</p>
+                        <p>Date: <span>12 Aug 2019</span></p>
+                        <p>Cost: <span>Start from $820</span></p>
+                        <p>Organizer: <span>Martine Agency</span></p>
+                        <p>Rating: <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i>
+                        <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i></p>
+                        <button>Plan Details</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slidercard">
+                        <h5 class="active">Upcoming Event</h5>
+                        <h2>Maldeve - Asia</h2>
+                        <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.</p>
+                        <p>Date: <span>12 Aug 2019</span></p>
+                        <p>Cost: <span>Start from $820</span></p>
+                        <p>Organizer: <span>Martine Agency</span></p>
+                        <p>Rating: <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i>
+                        <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i></p>
+                        <button>Plan Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <section class="section2">
+            <div class="section2txt">
+                <h1>Top Hotel & Restaurants</h1>
+                <p id="boz">Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.</p>
+            </div>
+            <div class="cards2">
+                <div class="card2">
+                    <img src="https://preview.colorlib.com/theme/martine/img/ind/industries_1.png" alt="a">
+                    <div class="card2txt">
+                        <h3>Hotel Polonia</h3>
+                        <p><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i>
+                        <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i> (210 review)</p>                    
+                        <p id="boz">London, United Kingdom</p>
+                        <p>From <span>$500</span></p>
+                    </div>
+                </div>
+                <div class="card2">
+                    <img src="https://preview.colorlib.com/theme/martine/img/ind/industries_1.png" alt="a">
+                    <div class="card2txt">
+                        <h3>Hotel Polonia</h3>
+                        <p><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i>
+                        <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i> (210 review)</p>                    
+                        <p id="boz">London, United Kingdom</p>
+                        <p>From <span>$500</span></p>
+                    </div>
+                </div>
+                <div class="card2">
+                    <img src="https://preview.colorlib.com/theme/martine/img/ind/industries_1.png" alt="a">
+                    <div class="card2txt">
+                        <h3>Hotel Polonia</h3>
+                        <p><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i>
+                        <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i> (210 review)</p>                    
+                        <p id="boz">London, United Kingdom</p>
+                        <p>From <span>$500</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>        
     </main>
-</body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <script>
+        const swiper = new Swiper('.swiper', {
+          loop: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+    </script>
+</body></body>
 </html>

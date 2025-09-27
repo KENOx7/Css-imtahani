@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.topheader {
+    background: #eaefff;
+    color: #0c3e72;
+}
+
+.containertop {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 10px;
+}
+.active{color: #fe5c24;}
+.top1 p, .top2 p, .top2 i{transition: 0.3s;}
+.top1 p:hover, .top2 p:hover, .top2 i:hover{color: #fe5c24;}
+.top1, .top2 {display: flex; gap: 20px;}
+
+.containerheadpc{display: none;}
+
+.containerheadmobile {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 10px;
+    color: #0c3e72;
+    i{font-size: 30px;}
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('https://preview.colorlib.com/theme/martine/img/banner_bg.png') center center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    h1{font-size: 2em;}
+    p{font-size: 1em; margin-bottom: 20px;}
+    button{
+        padding: 20px 60px; 
+        border: none; 
+        background: #2493e0; 
+        color: #fff; 
+        transition: 0.5s;
+    }
+    button:hover{background: #fe5c24;}
+}
+
+.seaction{
+    position: absolute;
+    width: 90%;
+    transform: translate(-50%, 50%);
+    top: 90%;
+    left: 50%;
+}
+
+.containerseaction {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 40px;
+    color: #0c3e72;
+    background: #fff;
+}
+
+.form *{margin-bottom: 10px;}
+
+.form input, .form select{
+    padding: 10px 30px;
+    width: 150px;
+    color: #2493e0;
+    border: 1px solid #2493e0;
+    outline: none;
+}
+
+.form button{
+    padding: 10px 20px;
+    border: none;
+    background: #fe5c24;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.form button:hover{background: #2493e0;}
+
+.tp{display: flex; gap: 30px;margin-bottom: 10px;}
+
+.tp p{color: #0c3e72; transition: 0.3s;}
+.tp p:hover{color: #fe5c24;}
+
+.form{
+    display: flex;
+}
+
+.section1{
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.section1txt{
+    margin: auto;
+    text-align: center;
+    max-width: 800px;
+}
+
+.cards1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 40px 20px;
+    gap: 20px;
+}
+
+.card1 {
+    position: relative;
+    width: 300px;
+}
+
+.card1 img {
+    width: 100%;
+    display: block;
+}
+
+.card1ho button{
+    border: none;
+    padding: 10px 20px;
+    background: #fe5c24;
+    color: #fff;
+}
+
+.card1ho h3{margin-top: 10px;}
+
+.card1ho {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(24, 78, 121, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px ;
+    opacity: 0;
+    transition: 0.8s;
+    color: #fff;
+}
+
+.card1:hover .card1ho {
+    opacity: 1;
+}
+
+#dis{
+    padding: 20px 40px;
+    background: #fe5c24;
+    color: #fff;
+    border: none;
+    transition: 0.5s;
+}
+
+#dis:hover{background: #2493e0;}
+
+@media only screen and (min-width:768px){
+
+    .containertop{justify-content: space-between;}
+    .containerheadmobile{display: none;}
+
+    .containerheadpc {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 10px;
+        color: #0c3e72;
+    }
+
+    .list ul{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .list ul li{transition: 0.3s;}
+    .list ul li:hover{color: #fe5c24;}
+
+    .booknow button{
+        padding: 20px 30px;
+        border: none;
+        background: #fe5c24;
+        text-align: center;
+        color: #fff;
+        transition: 0.5s;
+    }
+
+    .booknow button:hover{background: #2493e0;}
+
+    .banner{
+        h1{font-size: 4em;}
+        p{font-size: 1.5em; margin-bottom: 20px;}
+    }
+
+    .seaction{
+        position: absolute;
+        width: 90%;
+        transform: translate(-50%, 50%);
+        top: 100%;
+        left: 50%;
+    }
+
+    .form input, .form select{
+        padding: 10px ;
+        width: 200px;
+        color: #2493e0;
+        border: 1px solid #2493e0;
+        outline: none;
+    }
+
+    .section1{max-width: 1000px; margin: 200px auto 50px auto;}
+
+    
+
+    .cards1{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card1 {
+        position: relative;
+        width: 400px;
+    }
+}

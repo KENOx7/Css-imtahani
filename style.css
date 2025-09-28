@@ -185,7 +185,7 @@
     align-items: center;
 }
 
-.swiper-slide{margin-right: 5vw; margin-top: 10vh; cursor: grab;}
+.swiper-slide{cursor: grab;}
 .swiper-slide:active{cursor: grabbing;}
 
 .slidercard{
@@ -194,6 +194,7 @@
     background: #fff;
     padding: 40px;
     color: #0c3e72;
+    margin: 10vh 10vw 30vh 5vw;
 }
 
 .slidercard *{padding: 5px 0;}
@@ -276,12 +277,11 @@
 }
 
 .slider2card {
-    margin: 50px auto;
+    margin: 50px auto 201px auto;;
     max-width: 300px;
     background: #0e477d;
     padding: 30px;
     text-align: left;
-    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -422,6 +422,7 @@
         outline: none;
     }
 
+    .slidercard{margin: 20vh 30vw 20vh 30vw;}
     .section1{max-width: 1000px; margin: 200px auto 50px auto;}
     .cards1{flex-direction: row;flex-wrap: wrap;}
     .card1 {position: relative;width: 400px;}

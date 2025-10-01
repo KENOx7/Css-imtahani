@@ -140,6 +140,7 @@
     border: none;
     background: #fe5c24;
     color: #fff;
+    display: block;
     transition: 0.5s;
 }
 
@@ -457,6 +458,8 @@
         border: 1px solid #2493e0;
         outline: none;
     }
+    
+    .form button{display: inline;}
 
     .slider {
         position: absolute;

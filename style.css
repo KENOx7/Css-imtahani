@@ -8,32 +8,76 @@
 }
 
 .topheader{background: #eaefff; color: #0c3e72;}
+
 .containertop{
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 20px 10px;
+    font-size: 0.8em;
 }
+
 .active{color: #fe5c24;}
 .top1 p, .top2 p, .top2 i{transition: 0.3s;}
 .top1 p:hover, .top2 p:hover, .top2 i:hover{color: #fe5c24;}
 .top1, .top2{display: flex; gap: 20px;}
-.containerheadpc{display: none;}
+.headerpc{display: none;}
 
 .containerheadmobile{
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     padding: 20px 10px;
     color: #0c3e72;
-    i{font-size: 30px;}
+}
+
+.containerheadmobile i{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navmenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #0c3e72;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ;
+}
+.navmenu .fa-times {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+.navmenu ul {
+    list-style: none;
+    text-align: center;
+}
+.navmenu ul li {
+    padding: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.navmenu ul li:hover {
+    color: #fe5c24;
 }
 
 .banner{
@@ -48,17 +92,17 @@
     align-items: center;
     flex-direction: column;
     color: #fff;
-    h1{font-size: 2em;}
-    p{font-size: 1em; margin-bottom: 20px;}
-    button{
-        padding: 20px 60px;
-        border: none;
-        background: #2493e0;
-        color: #fff;
-        transition: 0.5s;
-    }
-    button:hover{background: #fe5c24; cursor: pointer;}
 }
+.banner h1{font-size: 2em;}
+.banner p{font-size: 1em; margin-bottom: 20px;}
+.banner button{
+    padding: 20px 60px;
+    border: none;
+    background: #2493e0;
+    color: #fff;
+    transition: 0.5s;
+}
+.banner button:hover{background: #fe5c24; cursor: pointer;}
 
 .seaction{
     position: absolute;
@@ -69,8 +113,8 @@
 }
 
 .containerseaction{
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1040px;
+    margin: auto;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -81,7 +125,7 @@
     background: #fff;
 }
 
-.form *{margin-bottom: 10px;}
+.form *{margin-bottom: 10px; margin-right: 10px;}
 
 .form input, .form select{
     padding: 10px 30px;
@@ -103,7 +147,7 @@
 .tp{display: flex; gap: 30px;margin-bottom: 10px;}
 .tp p{color: #0c3e72; transition: 0.3s;}
 .tp p:hover{color: #fe5c24;}
-.form{display: flex;}
+.form{display: flex; flex-wrap: wrap;}
 
 .section1{
     margin-top: 300px;
@@ -127,11 +171,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 0 40px 0;
+    padding: 20px 20px 40px 20px;
     gap: 20px;
 }
 
-.card1{position: relative; width: 300px;}
+.card1{position: relative; max-width: 550px;}
 .card1 img{width: 100%; display: block;}
 
 .card1ho button{
@@ -173,25 +217,31 @@
 
 #dis:hover{background: #2493e0; cursor: pointer;}
 
-.slider{
+.slider-section {
     background: url('https://preview.colorlib.com/theme/martine/img/event_bg.png') no-repeat center center;
     background-size: cover;
     width: 100%;
     height: 100vh;
     position: relative;
-    padding-top: 1px;
+}
+
+.slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
 }
 
 .swiper-slide{cursor: grab;}
 .swiper-slide:active{cursor: grabbing;}
 
 .slidercard{
-    width: 90%;
+    width: 100%;
     max-width: 450px;
     background: #fff;
     padding: 40px;
     color: #0c3e72;
-    margin: 15vh auto;
 }
 
 .slidercard *{padding: 5px 0;}
@@ -224,7 +274,7 @@
 
 .cards2{
     display: flex;
-    max-width: 1000px;
+    max-width: 1200px;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -254,8 +304,8 @@
 .slider2{
     position: relative;
     color: #fff;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .slider2 h1{font-size: 2.5em; color: #fff;}
@@ -268,7 +318,7 @@
 }
 
 .slider2card{
-    margin: 0 auto 50px auto;
+    margin: auto 50px auto;
     max-width: 300px;
     background: #0e477d;
     padding: 30px;
@@ -316,8 +366,8 @@
 }
 
 .containerfooter {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -353,13 +403,15 @@
 .footerbottom a, .fa-heart{color: #fe5c24; text-decoration: none;}
 
 @media only screen and (min-width:768px){
+    .headerpc {display: block;}
+    .headermobile {display: none;}
 
     .containertop{justify-content: space-between;}
-    .containerheadmobile{display: none;}
+    .containertop{font-size: 1em;}
 
     .containerheadpc{
-        max-width: 1000px;
-        margin: 0 auto;
+        max-width: 1200px;
+        margin: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -384,7 +436,7 @@
     .booknow button:hover{background: #2493e0; cursor: pointer;}
 
     .banner{
-        h1{font-size: 4em;}
+        h1{font-size: 110px}
         p{font-size: 1.5em; margin-bottom: 20px;}
     }
 
@@ -406,14 +458,23 @@
         outline: none;
     }
 
-    .slidercard{margin: 20vh auto;}
-    .section1{max-width: 1000px; margin: 200px auto 50px auto;}
-    .cards1{flex-direction: row;flex-wrap: wrap;}
-    .card1 {position: relative;width: 400px;}
+    .slider {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-20%, -50%);
+        max-width: 450px;
+    }
+
+    .slidercard{margin: 0;}
+    .section1{max-width: 1200px; margin: 160px auto 50px auto;}
+    .cards1{flex-direction: row; flex-wrap: wrap;}
+    .card1{position: relative; max-width: 550px;} 
     .section2txt{max-width: 800px;}
     .card2 img{transition: 0.5s;}
-    .card2:hover{scale: 1.05; img{rotate: 3deg;}}
-    .slider2txt{padding-bottom: 60px; max-width: 1000px; margin: auto; }
+    .card2:hover{scale: 1.05; }
+    .card2:hover img{transform: rotate(3deg);}
+    .slider2txt{padding-bottom: 60px; max-width: 1200px; margin: auto; }
     .card3{transition: 0.5s;}
-    .card3:hover{scale: 1.1; rotate: 1deg;}
+    .card3:hover{transform: scale(1.1) rotate(1deg);}
 }

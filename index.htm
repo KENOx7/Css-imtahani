@@ -52,7 +52,18 @@
                 <div class="logo">
                     <img src="https://preview.colorlib.com/theme/martine/img/logo.png" alt="logo" />
                 </div>
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </div>
+             <div class="navmenu" id="navmenu">
+                <i class="fa-solid fa-times" onclick="closemenu()"></i>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Packages</li>
+                    <li>Blog</li>
+                    <li>Pages</li>
+                    <li>Contact</li>
+                </ul>
             </div>
         </div>
     </header>
@@ -84,7 +95,7 @@
                             <option>One</option>
                             <option>Two</option>
                             <option>Three</option>
-                        </select><br/>
+                        </select>
                     <button>Search</button>
                     </form>
                 </div>
@@ -139,32 +150,34 @@
             </div>
             <button id="dis">Discover More</button>
         </section>
-        <div class="slider swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="slidercard">
-                        <h5 class="active">Upcoming Event</h5>
-                        <h2>Maldeve - Asia</h2>
-                        <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.</p>
-                        <p>Date: <span>12 Aug 2019</span></p>
-                        <p>Cost: <span>Start from $820</span></p>
-                        <p>Organizer: <span>Martine Agency</span></p>
-                        <p>Rating: <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i>
-                        <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i></p>
-                        <button>Plan Details</button>
+        <div class="slider-section">
+            <div class="slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slidercard">
+                            <h5 class="active">Upcoming Event</h5>
+                            <h2>Maldeve - Asia</h2>
+                            <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.</p>
+                            <p>Date: <span>12 Aug 2019</span></p>
+                            <p>Cost: <span>Start from $820</span></p>
+                            <p>Organizer: <span>Martine Agency</span></p>
+                            <p>Rating: <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i>
+                            <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i></p>
+                            <button>Plan Details</button>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slidercard">
-                        <h5 class="active">Upcoming Event</h5>
-                        <h2>Maldeve - Asia</h2>
-                        <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.</p>
-                        <p>Date: <span>12 Aug 2019</span></p>
-                        <p>Cost: <span>Start from $820</span></p>
-                        <p>Organizer: <span>Martine Agency</span></p>
-                        <p>Rating: <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i>
-                        <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i></p>
-                        <button>Plan Details</button>
+                    <div class="swiper-slide">
+                        <div class="slidercard">
+                            <h5 class="active">Upcoming Event</h5>
+                            <h2>Maldeve - Asia</h2>
+                            <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.</p>
+                            <p>Date: <span>12 Aug 2019</span></p>
+                            <p>Cost: <span>Start from $820</span></p>
+                            <p>Organizer: <span>Martine Agency</span></p>
+                            <p>Rating: <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i>
+                            <i class="fa-solid fa-star" style="color: #fe5c24;"></i><i class="fa-solid fa-star" style="color: #fe5c24;"></i></p>
+                            <button>Plan Details</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -339,13 +352,21 @@
     <script>
         const swiper1 = new Swiper('.slider', {
           loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
           navigation: {
-            nextEl: '.slider .swiper-button-next', 
-            prevEl: '.slider .swiper-button-prev',
+            nextEl: '.slider-section .swiper-button-next', 
+            prevEl: '.slider-section .swiper-button-prev',
           },
         });
         const swiper2 = new Swiper('.slider2', { 
           loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
           slidesPerView: 1, 
           spaceBetween: 30,
           navigation: {
@@ -359,6 +380,14 @@
             }
           }
         });
+
+        var navmenu = document.getElementById("navmenu");
+        function openmenu() {
+            navmenu.style.right = "0";
+        }
+        function closemenu() {
+            navmenu.style.right = "-100%";
+        }
     </script>
 </body>
 </html>

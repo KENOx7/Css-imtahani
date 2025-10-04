@@ -129,7 +129,7 @@
 
 .form input, .form select{
     padding: 10px 30px;
-    width: 150px;
+    width: 100%;
     color: #2493e0;
     border: 1px solid #2493e0;
     outline: none;
